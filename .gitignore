@@ -1,0 +1,66 @@
+# === Node / React ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+.env
+.env.local
+.env.*.local
+
+# Vite / Webpack / build
+dist/
+build/
+.cache/
+.tmp/
+.vite/
+
+# Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# === .NET / WinUI3 ===
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+
+# User files
+*.user
+*.vspscc
+*.vssscc
+*.suo
+*.dbmdl
+*.jfm
+*.userosscache
+
+# Visual Studio cache
+.vs/
+
+# NuGet
+*.nupkg
+**/packages/*
+
+# Rider / VSCode extra
+.idea/
+*.sln.iml
+
+# Publish outputs
+publish/
+
+# .NET Secret Manager keys
+secrets.json
+
+# === OS Files ===
+# Windows / macOS / etc.
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo

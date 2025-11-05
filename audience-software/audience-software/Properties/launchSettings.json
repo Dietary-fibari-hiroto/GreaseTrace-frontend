@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "audience-software (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "audience-software (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
