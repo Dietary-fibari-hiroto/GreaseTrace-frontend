@@ -1,0 +1,43 @@
+.text-md {
+  font-size: 20px;
+}
+.text-md-bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+.text-title-label {
+  font-size: 75px;
+  font-weight: bold;
+}
+.text-section-label {
+  font-size: 48px;
+  font-weight: bold;
+}
+.text-xl-bold {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.text-xl {
+  font-size: 30px;
+}
+
+.text-xs {
+  font-size: 15px;
+}
+.text-md-explanatory {
+  font-size: 20px;
+  /*フォントファミリー実装*/
+}
+
+:root {
+  --color-primary: #00bbff;
+  --color-secondary: #0097ce;
+  --color-tertiary: #006c93;
+  --color-quatemary: #00445d;
+  --color-fifthorder: #4ed0ff;
+  --color-sixthorder: #89dffe;
+  --color-seventhstage: #ccf1ff;
+  --color-deep-gray: #707070;
+  --color-bg-gray: #f3f3f3;
+}
