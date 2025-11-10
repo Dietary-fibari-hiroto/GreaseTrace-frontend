@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.section-frame {
-  width: 100vw;
-  height: 100vh;
+@import url("./Assets/Styles/utilts.css");
+@import url("./Assets/Styles/variables.css");
+@import url("./Assets/Styles/fonts.css");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "NotoSansJP", sans-serif;
 }

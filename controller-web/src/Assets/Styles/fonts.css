@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("../Fonts/NotoSansJP/NotoSansJP-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("../Fonts/NotoSansJP/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ShipporiMincho";
+  src: url("../Fonts/Shippori_Mincho/ShipporiMincho-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ShipporiMincho";
+  src: url("../Fonts/Shippori_Mincho/ShipporiMincho-Bold.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: bold;
+}
+
+* {
+  font-family: "NotoSansJP", sans-serif;
+}
