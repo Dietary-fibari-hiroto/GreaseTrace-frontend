@@ -12,6 +12,25 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\Images\cable.svg" />
+    <None Remove="Assets\Images\eraser.svg" />
+    <None Remove="Assets\Images\fullscreen.svg" />
+    <None Remove="Assets\Images\GreaseTraiceIcon.png" />
+    <None Remove="Assets\Images\hand.svg" />
+    <None Remove="Assets\Images\monitor-down.svg" />
+    <None Remove="Assets\Images\panel-top.svg" />
+    <None Remove="Assets\Images\pen.svg" />
+    <None Remove="Assets\Images\rain-978339_1920.jpg" />
+    <None Remove="Assets\Images\rotate-ccw.svg" />
+    <None Remove="Assets\Images\search.svg" />
+    <None Remove="Assets\Images\shield-half.svg" />
+    <None Remove="SplashWindow.xaml" />
+    <None Remove="src\Styles\FontStyles.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="src\Styles\FontStyles.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -21,6 +40,12 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="src\Styles\FontStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +63,14 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.6901" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251003001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="SplashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!--

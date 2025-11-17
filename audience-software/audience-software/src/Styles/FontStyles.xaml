@@ -1,0 +1,48 @@
+<ResourceDictionary
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<FontFamily x:Key="NotoSansJP">ms-appx:///Assets/Fonts/NotoSansJP/NotoSansJP-Regular.ttf#Noto Sans JP</FontFamily>
+	<FontFamily x:Key="NotoSansJP-Bold">ms-appx:///Assets/Fonts/NotoSansJP/NotoSansJP-Bold.ttf#Noto Sans JP</FontFamily>
+
+	<Style x:Key="text-mini" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="FontWeight" Value="Normal"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP}" />
+	</Style>
+	<Style x:Key="text-mini-bold" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP-Bold}" />
+	</Style>
+    <Style x:Key="text-md" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP}" />
+    </Style>
+	<Style x:Key="text-md-bold" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP-Bold}" />
+	</Style>
+	<Style x:Key="text-xl-bold" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="30"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP-Bold}" />
+	</Style>
+	<Style x:Key="text-xl" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="30"/>
+		<Setter Property="FontWeight" Value="Normal"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP}" />
+	</Style>
+	<Style x:Key="text-section-label" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="48"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP-Bold}" />
+	</Style>
+	<Style x:Key="text-title-label" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="75"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="{StaticResource NotoSansJP-Bold}" />
+	</Style>
+
+</ResourceDictionary>

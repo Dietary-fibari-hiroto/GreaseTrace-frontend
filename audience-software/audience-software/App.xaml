@@ -10,7 +10,14 @@
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Noto Sans JP" />
+                <Setter Property="FontWeight" Value="Normal" />
+            </Style>
             <!-- Other app resources here -->
+            <FontFamily x:Key="NotoSansJP">ms-appx:///Assets/Fonts/NotoSansJP/NotoSansJP-Regular.ttf#Noto Sans JP</FontFamily>
+            <FontFamily x:Key="NotoSansJP-Bold">ms-appx:///Assets/Fonts/NotoSansJP/NotoSansJP-Regular.ttf#Noto Sans JP</FontFamily>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
