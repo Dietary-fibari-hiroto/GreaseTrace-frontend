@@ -14,6 +14,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\Images\cable.svg" />
+    <None Remove="Assets\Images\chevron-left.svg" />
     <None Remove="Assets\Images\eraser.svg" />
     <None Remove="Assets\Images\fullscreen.svg" />
     <None Remove="Assets\Images\GreaseTraiceIcon.png" />
@@ -25,7 +26,12 @@
     <None Remove="Assets\Images\rotate-ccw.svg" />
     <None Remove="Assets\Images\search.svg" />
     <None Remove="Assets\Images\shield-half.svg" />
+    <None Remove="Audience.xaml" />
     <None Remove="SplashWindow.xaml" />
+    <None Remove="src\Components\BounceControl.xaml" />
+    <None Remove="src\Pages\AudienceConnectionPage.xaml" />
+    <None Remove="src\Pages\ControllerConnectingPage.xaml" />
+    <None Remove="src\Pages\DashBoardPage.xaml" />
     <None Remove="src\Styles\FontStyles.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -65,10 +71,32 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251003001" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\Pages\" />
+    <Page Update="Audience.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="src\Pages\AudienceConnectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="src\Pages\ControllerConnectingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="SplashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="src\Pages\DashBoardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="src\Components\BounceControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

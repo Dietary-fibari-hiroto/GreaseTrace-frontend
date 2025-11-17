@@ -30,8 +30,9 @@ namespace audience_software
     /// </summary>
     public partial class App : Application
     {
+
         private SplashWindow? _splashWindow;
-        private MainWindow? _mainWindow;
+        public MainWindow? _mainWindow;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

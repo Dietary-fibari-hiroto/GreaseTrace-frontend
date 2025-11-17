@@ -38,16 +38,19 @@
                         Text="Grease Trace"
                            FontSize="48"
                            FontWeight="Bold"
+                        Foreground="White"
                            />
                     <TextBlock
                         HorizontalAlignment="Center"
                     Text="Lines speak before words."
-                    FontSize="15"/>
+                    FontSize="15"
+                        Foreground="White"/>
                 </StackPanel>
                 <TextBlock
                     HorizontalAlignment="Center"
                     Text="...loading"
-                    FontSize="15"/>
+                    FontSize="15"
+                    Foreground="White"/>
             </StackPanel>
             <Image HorizontalAlignment="Right"
                    Source="/Assets/Images/rain-978339_1920.jpg"

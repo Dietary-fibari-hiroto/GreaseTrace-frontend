@@ -1,7 +1,10 @@
+using audience_software.src.Pages;
 using Microsoft.UI;
-using Microsoft.UI.Xaml;
-using System;
 using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using System;
+using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -13,11 +16,14 @@ namespace audience_software
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public Frame NavFrame => MainFrame;
+
         public MainWindow()
         {
             InitializeComponent();
             MaximizeWindow();
-           
+
+            MainFrame.Navigate(typeof(DashBoardPage));
         }
 
         private void MaximizeWindow()
@@ -35,6 +41,5 @@ namespace audience_software
             }
 
         }
-
     }
 }

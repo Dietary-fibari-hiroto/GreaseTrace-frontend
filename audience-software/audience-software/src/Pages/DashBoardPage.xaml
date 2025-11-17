@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="audience_software.src.Pages.DashBoardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:audience_software.src.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid VerticalAlignment="Center"
+          HorizontalAlignment="Center">
+        <StackPanel
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Spacing="20">
+            <StackPanel
+                Orientation="Vertical">
+                <TextBlock Text="ダッシュボード"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       />
+                <TextBlock Text="Dashboard"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Width="1030" Height="300">
+                <TextBlock Text="ファンクション" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Stretch" Spacing="30">
+                    <Border BorderBrush="Black"
+                        HorizontalAlignment="Left"
+                            BorderThickness="1"
+                            Width="500"
+                            Height="250"
+                            Tapped="NavigateToController"
+                            >
+                        <StackPanel Orientation="Vertical"
+
+                            >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Background="#00445D">
+                                <Image Source="/Assets/Images/cable.svg" Margin="10 0" />
+                                <TextBlock Text="コネクトを開始する" Foreground="White" FontSize="20" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Margin="10" TextWrapping="Wrap" Text="コネクトは、相手の画面をリアルタイムで確認しながら、ブラウザ上で線やマーカーを描くことができる機能です。
+ 離れた場所にいても、画面上で視覚的に操作説明や指示を行うことができます。" FontSize="15"/>
+
+
+                        </StackPanel>
+
+                    </Border>
+                    <Border BorderBrush="Black"
+                           BorderThickness="1"
+                           HorizontalAlignment="Right"             
+                            Width="500"
+                           Height="250"
+                            Tapped="NavigateToAudience"
+                           >
+                        <StackPanel Orientation="Vertical"
+
+                           >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Background="#00445D">
+                                <Image Source="/Assets/Images/fullscreen.svg" Margin="10 0" />
+                                <TextBlock Text="画面を共有する" Foreground="White" FontSize="20" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Margin="10" TextWrapping="Wrap" Text="コントローラー（描画者）がWeb上で描いた線や図形をリアルタイムで受信し、Windowsデスクトップ上に直接重ねて表示する機能です。
+ ユーザーの操作を妨げることなく、画面上に半透明のオーバーレイを表示し、描画内容を即座に反映します。" FontSize="15"/>
+
+
+                        </StackPanel>
+
+                    </Border>
+
+                </StackPanel>
+
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

@@ -13,6 +13,7 @@
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="Noto Sans JP" />
                 <Setter Property="FontWeight" Value="Normal" />
+                <Setter Property="Foreground" Value="Black"/>
             </Style>
             <!-- Other app resources here -->
             <FontFamily x:Key="NotoSansJP">ms-appx:///Assets/Fonts/NotoSansJP/NotoSansJP-Regular.ttf#Noto Sans JP</FontFamily>

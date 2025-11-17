@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="audience_software.src.Components.BounceControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:audience_software.src.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ContentPresenter x:Name="ContentHost">
+            <ContentPresenter.RenderTransform>
+                <TranslateTransform x:Name="BounceTransform" />
+            </ContentPresenter.RenderTransform>
+        </ContentPresenter>
+
+        <Grid.Resources>
+            <Storyboard x:Name="BounceAnimation"
+                        RepeatBehavior="Forever"
+                        AutoReverse="True">
+                <DoubleAnimation
+                    Storyboard.TargetName="BounceTransform"
+                    Storyboard.TargetProperty="Y"
+                    From="0"
+                    To="50"
+                    Duration="0:0:2">
+                    <DoubleAnimation.EasingFunction>
+                        <BounceEase Bounces="1"
+                                    Bounciness="2"
+                                    EasingMode="EaseOut" />
+                    </DoubleAnimation.EasingFunction>
+                </DoubleAnimation>
+            </Storyboard>
+        </Grid.Resources>
+
+    </Grid>
+</UserControl>
