@@ -1,10 +1,11 @@
+@import url("./Assets/Styles/utilts.css");
+@import url("./Assets/Styles/variables.css");
+@import url("./Assets/Styles/fonts.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("./Assets/Styles/utilts.css");
-@import url("./Assets/Styles/variables.css");
-@import url("./Assets/Styles/fonts.css");
 
 html,
 body {

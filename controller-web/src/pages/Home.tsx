@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <section className="section-frame flex justify-center items-center text-black">
-      <p>Develop</p>
+      <p className="text-md-bold">Grease Trace</p>
     </section>
   );
 };
