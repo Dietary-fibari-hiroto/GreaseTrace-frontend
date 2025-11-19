@@ -1,7 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import type { RouteItem } from "./DTOs";
-import { Connect,Dashboard,Endview,Home,Login,Register } from "./pages";
-
+import { Connect, Dashboard, Endview, Home, Login, Register } from "./pages";
 
 /**
  * routelistにpathとelementを設定することで
@@ -9,11 +8,11 @@ import { Connect,Dashboard,Endview,Home,Login,Register } from "./pages";
  */
 const routeList: RouteItem[] = [
   { path: "/", element: <Home /> },
-  { path:"/login",element:<Login /> },
-  {path:"/register",element:<Register />},
-  {path:"/dashboard",element:<Dashboard />},
-  {path:"/connect",element:<Connect />},
-  {path:"/endview",element:<Endview />},
+  { path: "/login", element: <Login /> },
+  { path: "/register", element: <Register /> },
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "/connect", element: <Connect /> },
+  { path: "/endview", element: <Endview /> },
 ];
 
 function App() {
