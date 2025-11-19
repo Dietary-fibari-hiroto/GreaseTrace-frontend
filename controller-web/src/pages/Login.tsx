@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
-import Form from "../components/Form";
+import Form from "../components/Input";
+import { Link } from "react-router-dom";
 export default function Login(){
     return(
         <div className="h-screen flex flex-col">
@@ -14,7 +15,7 @@ export default function Login(){
                     <form action="" method="POST">
                         <Form label="メールアドレス" type="mail" id="email" name="email" />
                         <Form label="パスワード" type="password" id="password" name="password" className="pb-0" />
-                            <p  className="text-xs text-right underline pb-12"><a href="">パスワードをお忘れですか？</a></p>
+                            <p  className="text-xs text-right underline pb-12"><Link to="">パスワードをお忘れですか？</Link></p>
                         <Button value="ログイン"/>
                         
                     </form>

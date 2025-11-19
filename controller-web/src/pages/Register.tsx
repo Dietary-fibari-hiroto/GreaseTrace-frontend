@@ -1,7 +1,8 @@
 //import { useState } from "react";
 import Button from "../components/Button";
-import Form from "../components/Form";
+import Form from "../components/Input";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 export default function Legister(){
     // const [formData,setFormData] = useState({lastname:"",firstname:"",email:"",password:""});
@@ -43,7 +44,7 @@ export default function Legister(){
                         </div>
                         <Button value="アカウント作成" />
                     </form>
-                    <p className="underline text-center"><a href="/login">ログイン</a></p>
+                    <p className="underline text-center"><Link to="/login">ログイン</Link></p>
                     
                 </div>
             </div>
