@@ -28,10 +28,7 @@ namespace audience_software
             InitializeComponent();
         }
 
-        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            await InitPeerConnectionAsync();
-        }
+
 
     }
 }

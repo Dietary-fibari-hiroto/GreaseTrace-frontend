@@ -7,18 +7,17 @@ import Connect from "./pages/Connect";
 import Dashboard from "./pages/Dashboard";
 import Endview from "./pages/Endview";
 
-
 /**
  * routelistにpathとelementを設定することで
  * roudingできるお
  */
 const routeList: RouteItem[] = [
   { path: "/", element: <Home /> },
-  { path:"/login",element:<Login /> },
-  {path:"/register",element:<Legister />},
-  {path:"/dashboard",element:<Dashboard />},
-  {path:"/connect",element:<Connect />},
-  {path:"/endview",element:<Endview />},
+  { path: "/login", element: <Login /> },
+  { path: "/register", element: <Legister /> },
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "/connect", element: <Connect /> },
+  { path: "/endview", element: <Endview /> },
 ];
 
 function App() {
