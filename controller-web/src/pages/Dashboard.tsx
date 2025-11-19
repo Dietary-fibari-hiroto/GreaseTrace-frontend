@@ -1,8 +1,7 @@
 import Header from "../components/Header";
 import FunctionCard from "../components/FunctionCard"
-import fullScreen from "../Assets/Images/icons/fullscreen.svg"
-import cable from "../Assets/Images/icons/cable.svg"
-import monitor_down from "../Assets/Images/icons/monitor-down.svg"
+import { cable,fullScreen,monitor_down } from "../Assets/Images/ImagesRoute";
+
 
 const icons ={
     fullScreen,

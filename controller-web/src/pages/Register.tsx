@@ -1,7 +1,8 @@
 //import { useState } from "react";
 import Button from "../components/Button";
-import Form from "../components/Form";
+import Input from "../components/Input";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 export default function Legister(){
     // const [formData,setFormData] = useState({lastname:"",firstname:"",email:"",password:""});
@@ -33,17 +34,17 @@ export default function Legister(){
                         <p className="text-section-label">Register</p>
                     </div>
                     <form action="" method="POST">
-                        <Form label="姓" type="text" id="lastname" name="lastname" /> 
-                        <Form label="名" type="text" id="firstname" name="firstname" /> 
-                        <Form label="メールアドレス" type="mail" id="email" name="email" />
-                        <Form label="パスワード" type="password" id="password" name="password" className="pb-0" />
+                        <Input label="姓" type="text" id="lastname" name="lastname" /> 
+                        <Input label="名" type="text" id="firstname" name="firstname" /> 
+                        <Input label="メールアドレス" type="mail" id="email" name="email" />
+                        <Input label="パスワード" type="password" id="password" name="password" className="pb-0" />
                         <div className="pb-[60px]">
                             <input type="checkbox" />
                             <label className="pl-[10px]"><span className="text-[var(--color-primary)]">利用規約</span>に同意する</label>
                         </div>
                         <Button value="アカウント作成" />
                     </form>
-                    <p className="underline text-center"><a href="/login">ログイン</a></p>
+                    <p className="underline text-center"><Link to="/login">ログイン</Link></p>
                     
                 </div>
             </div>
