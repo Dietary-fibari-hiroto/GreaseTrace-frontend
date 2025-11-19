@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
-import Form from "../components/Input";
+import Input from "../components/Input";
 import { Link } from "react-router-dom";
 export default function Login(){
     return(
@@ -13,8 +13,8 @@ export default function Login(){
                         <p className="text-section-label">Register</p>
                     </div>
                     <form action="" method="POST">
-                        <Form label="メールアドレス" type="mail" id="email" name="email" />
-                        <Form label="パスワード" type="password" id="password" name="password" className="pb-0" />
+                        <Input label="メールアドレス" type="mail" id="email" name="email" />
+                        <Input label="パスワード" type="password" id="password" name="password" className="pb-0" />
                             <p  className="text-xs text-right underline pb-12"><Link to="">パスワードをお忘れですか？</Link></p>
                         <Button value="ログイン"/>
                         
