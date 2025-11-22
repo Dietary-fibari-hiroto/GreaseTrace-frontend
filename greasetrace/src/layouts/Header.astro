@@ -1,0 +1,68 @@
+---
+import { scrollToSection } from "../assets/js/scroll"
+import { ImagesRoute } from "../assets/ImagesRoute"
+const sections = [
+    {id:"hero",label:"Home"},
+    {id:"concept",label:"Concept"},
+    {id:"about",label:"About"},
+    {id:"download",label:"Download"},
+    {id:"menber",label:"Menber"},
+    {id:"github",label:"GitHub"}
+]
+---
+
+<header>
+    <div class="apple-title-content">
+        <img src = {ImagesRoute.GreaseTraiceIcon}/>
+        <span class="text-3xl font-bold">Grease Trace</span>
+    </div>
+    <nav class="text-lg">
+        {sections.map(({id,label})=>(
+            <button class="text-lg font-medium" onclick={`scrollToSection('${id}')`}>
+                {label}
+            </button>
+        ))}
+    </nav>
+</header>
+
+
+
+
+
+<style lang="scss">
+    header{
+        box-sizing: border-box;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index: 99;
+        width:100vw;
+        height:50px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 10px;
+        margin:10px 0;
+        color:white;
+
+        .apple-title-content{
+            display:flex;
+            align-items:center;
+            > img{
+                height:3rem;
+            }
+
+        }
+        .apple-title-content:last-child{
+            margin-left:1rem;
+        }
+
+        nav{
+            display:flex;
+            align-items: center;
+            > * + *{
+                margin-left:3rem;
+            }
+        }
+    }
+</style>

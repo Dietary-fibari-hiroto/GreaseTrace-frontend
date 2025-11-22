@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #00bbff;
+  --color-secondary: #0097ce;
+  --color-tertiary: #006c93;
+  --color-quatemary: #00445d;
+  --color-fifthorder: #4ed0ff;
+  --color-sixthorder: #89dffe;
+  --color-seventhstage: #ccf1ff;
+  --color-deep-gray: #707070;
+  --color-bg-gray: #f3f3f3;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}

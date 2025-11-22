@@ -1,16 +1,151 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro"
+import { scrollToSection } from "../assets/js/scroll"
+import { ImagesRoute } from "../assets/ImagesRoute";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+	<img class="section-frame hero-background" src ={ImagesRoute.IMG_7194}/>
+	<div id="blur-background"/>
+	<section class="section-frame" id = "hero">
+		<div class="app-title-container">
+			<div class="labels">
+				<p class="text-lg">言葉より早く、線で伝える。</p>
+				<p class="font-bold text-6xl">Grease Trace</p>
+			</div>
+			<div class="buttons">
+				<button class="submit-button quaternary submit-button gray font-medium" onclick={`scrollToSection("github")`}>
+					Github
+				</button>
+				<button class="submit-button gray font-medium" onclick={`scrollToSection("download")`}>
+					ソフトをダウンロード
+				</button>
+			</div>
+		</div>
+		<img src ={ImagesRoute.GreaseTraiceIcon}/>
+	</section>
+	<section class="section-frame" id = "concept">
+		<div>
+			<p class="font-bold text-5xl notoserifjp color-primary">声だけじゃ伝わらない瞬間に、<br/>
+“線で指せる”遠隔サポートを。</p>
+			<p class="text-lg leading-text">Grease Trace は、遠隔での共同作業において 「説明が伝わらない」ことで生じるもどかしさを解消する、リアルタイム描画共有ツールです。本システムを利用することで、「リモートサポートの効率化」「教育・研修における生産性の向上」「コミュニケーションにおけるストレスの軽減」といった効果が期待されます。また、相手PCを遠隔操作することなく視覚的な指示のみを共有できるため、安全かつセキュアなリモート支援を実現します。</p>
+			<button class="submit-button gray">体験を始める</button>
+		</div>
+		<figure class="flex-all-center">
+			<img class="img-horizontal-md" src = {ImagesRoute.IMG_7187}/>
+			<div class="design-element img-horizontal-md position-absolute-center"/>
+			<img class="img-horizontal-md" src = {ImagesRoute.IMG_7188}/>
+		</figure>
+	</section>
+	<section>
+		
+	</section>
+</MainLayout>
+
+
+<style lang="scss">
+	.hero-background{
+		position:fixed;
+		z-index:-1;
+		top:0;
+		left:0;
+
+	}
+	#blur-background{
+		position: fixed;
+		top:0;
+		left:0;
+		z-index: 1;
+		width:100%;
+		height: 100lvh;
+		background-color: #00000044;
+		backdrop-filter: blur(10px);
+		opacity:0;
+		transition: opacity 0.6s ease, transform 0.6s ease;
+		&.active{
+			opacity: 1;
+		}
+	}
+	section{
+		position: relative;
+		z-index: 2;
+	}
+	#hero{
+		display:flex;
+		justify-content:space-around;
+		align-items: center;
+		color:white;
+		> img{
+			height: 10rem;
+		}
+		.app-title-container{
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+
+			.labels{
+				text-align:start;
+			}
+			.buttons{
+				display: flex;
+				> :last-child{
+					margin-left:1.25rem;
+				}
+			}
+		}
+	}
+
+	#concept{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color:white;
+		> *{
+			box-sizing: border-box;
+			width:50%;
+		}
+		> div{
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			padding:0 6rem;
+			> * + *{
+				margin-top:2rem;
+			}
+		}
+		> figure{
+			position:relative;
+
+			> *{
+				position:absolute;
+			}
+			>:first-child{
+				top:50%;
+				left:0;
+				transform: translate(0%,-80%);
+				z-index: 5;
+			}
+			>:last-child{
+				bottom:50%;
+				right:0;
+				transform: translate(0,80%);
+				z-index: 6;
+			}
+		}
+	}
+</style>
+
+
+<script>
+	document.addEventListener("scroll",()=>{
+		const element = document.getElementById("blur-background");
+		if(!element) return;
+
+		const scrollY = window.scrollY || window.pageYOffset;
+		if(scrollY > 20){
+			element.classList.add("active");
+		}else{
+			element.classList.remove("active");
+		}
+	});
+</script>
