@@ -3,11 +3,32 @@ const {img,title,content} = Astro.props;
 ---
 
 <div>
-
+    <img src = {img} />
+    <p class="text-3xl font-bold">{title}</p>
+    <p class="text-lg">{content}</p>
 </div>
 
 <style lang="scss">
     div{
-        width:30rem;
+        box-sizing: border-box;
+        padding:0 2rem;
+        text-align: center;
+        width:24rem;
+        height:16rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border:solid black 1px;
+        border-radius: 1rem;
+        > * + *{
+            margin-top:1rem;
+        }
+        > img {
+            background:black;
+            padding:0.5rem;
+            border-radius: 50%;
+
+        }
     }
 </style>

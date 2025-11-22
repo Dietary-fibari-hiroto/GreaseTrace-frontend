@@ -1,0 +1,22 @@
+---
+const {label,className} = Astro.props;
+---
+
+<p class=`${className}`>
+    {label}
+</p>
+
+<style lang="scss">
+    p{
+        width:100%;
+        box-sizing: border-box;
+        padding:0 3em;
+        color:var(--color-primary);
+        font-weight: bold;
+        font-size: 3em;
+        text-align:start;
+        &.white{
+            color: white;
+        }
+    }
+</style>

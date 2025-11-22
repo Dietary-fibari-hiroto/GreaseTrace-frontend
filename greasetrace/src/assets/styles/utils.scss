@@ -28,6 +28,13 @@
   &.quaternary {
     background-color: var(--color-quatemary);
   }
+  &.primary {
+    background-color: var(--color-primary);
+  }
+  &.fixed-size {
+    width: 20rem;
+    box-sizing: border-box;
+  }
 }
 
 .img-horizontal-md {

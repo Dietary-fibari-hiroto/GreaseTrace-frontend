@@ -1,0 +1,45 @@
+---
+import { ImagesRoute } from "../assets/ImagesRoute"
+---
+
+<footer class="section-frame">
+    <img src={ImagesRoute.GreaseTraiceIcon}/>
+    <div>
+        <p class="text-lg">言葉より早く、線で伝える。</p>
+        <p class="text-6xl font-bold">GreaseTrace</p>
+    </div>
+    <p class="copyright">Copyright 2025-11-23 - チーム真珠,ゆー,mattuu0,Engawan,r,ひろと All Rights Reserved.</p>
+</footer>
+
+<style lang="scss">
+    footer{
+        position:relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        text-align: center;
+        color: white;
+        > img{
+            height: 10rem;
+        }
+        >div{
+            :last-child{
+                margin-top:-1rem;
+            }
+        }
+        > * + *{
+            margin-top:3rem;
+        }
+        .copyright{
+            position: absolute;
+            bottom:0;
+            width:100%;
+            text-align: center;
+            letter-spacing: 2px;
+            padding:0.5rem 0;
+            font-family: "NotoSerifJP";
+        }
+    }
+</style>

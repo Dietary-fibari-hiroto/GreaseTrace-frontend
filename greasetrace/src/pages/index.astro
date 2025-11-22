@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import { scrollToSection } from "../assets/js/scroll"
 import { ImagesRoute } from "../assets/ImagesRoute";
+import { DemoElement,SectionTitle } from "../components";
 ---
 
 <MainLayout>
@@ -37,8 +38,155 @@ import { ImagesRoute } from "../assets/ImagesRoute";
 			<img class="img-horizontal-md" src = {ImagesRoute.IMG_7188}/>
 		</figure>
 	</section>
-	<section>
-		
+	<section class="section-frame" id = "about">
+		<div>
+			<DemoElement img={ImagesRoute.fullscreen} title="Windows側に重ねて表示" content="相手の操作を邪魔せず、上に半透明で描画。" />
+			<div class="demo-horizontal-zone">
+				<DemoElement img={ImagesRoute.cable} title="ブラウザからリアルタイム描画" content="ペン、矢印、色変更などの操作が可能。"/>
+				<DemoElement img={ImagesRoute.shield_half} title="セキュアな構成" content="操作権限は描画のみ。PCの制御は行わない。"/>
+			</div>
+			<DemoElement img={ImagesRoute.panel_top} title="描画はWebでも" content="描画側はソフトウェアでもWebアプリでも"/>
+		</div>
+		<div>
+			<div class="background-card"/>
+			<div class="text-container notoserifjp">
+				<p class="text-5xl font-bold">安全に使える描画共有ツール</p>
+
+				<div class="inside-content">
+									<p><span class="text-4xl">手軽</span><span class="text-2xl">×</span><span class="text-4xl">安全</span></p>
+				<p class="leading-text notoserifjp">
+					少しだけ共有したいときも<br/>
+					すぐに共有したいときも<br/>
+					簡単に共有したいときも
+				</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-frame" id="technology">
+		<SectionTitle label = "Technology Stack"/>
+		<p class="text-3xl notoserifjp font-bold">
+			ネイティブUI × Web技術 × リアルタイム通信<br/>
+			に最適化されたハイブリッド構成
+		</p>
+		<figure class="img-list ">
+			<img src ={ImagesRoute.logo_winui}/>
+			<img src ={ImagesRoute.react_original_logo_icon_146374}/>
+			<img src ={ImagesRoute.golang_logo_icon_171073}/>
+			<img src ={ImagesRoute._3409784}/>
+		</figure>
+		<p class="text-md notoserifjp letter-text leading-text">
+			ネイティブ品質の操作感を提供する WinUI 3 と、<br/>
+柔軟でモダンな UI 開発を可能にする React.js を組み合わせたハイブリッドアーキテクチャ構成<br/>
+<br/>
+さらに Go による高速で軽量な ID 検証 と、 <br/>
+PeerJS（WebRTC）による低遅延のリアルタイム通信 を統合することで、<br/>
+「瞬時に線で伝える」というプロダクトの核心機能を支える、<br/>
+効率的かつ高性能な設計を採用しています。<br/>
+		</p>
+	</section>
+	<section class="section-frame" id="download">
+		<SectionTitle label = "Download/Link"/>
+		<div>
+			<div class="logo-container">
+				<img src = {ImagesRoute.GreaseTraiceIcon} />
+				<p class="text-3xl font-bold">Grease Trace Desktop</p>
+			</div>
+			<p class="text-lg">ひと描きで、相手に届くサポートを実現するソフトウェア</p>
+			<p>
+				windows版<br/>
+				バージョン: 1.0.0<br/>
+				リリース:2025/00/00<br/>
+			</p>
+			<button class="submit-button primary fixed-size">
+				ダウンロード
+			</button>
+		</div>
+				<div>
+			<div class="logo-container">
+				<img src = {ImagesRoute.GreaseTraiceIcon} />
+				<p class="text-3xl font-bold">Grease Trace</p>
+			</div>
+			<p class="text-lg">ひと描きで、相手に届くサポートを実現するWebアプリ</p>
+			<p>
+				Web版<br/>
+				バージョン: 1.0.0<br/>
+				リリース:2025/00/00<br/>
+			</p>
+			<button class="submit-button primary fixed-size">
+				サイトへ移動する
+			</button>
+		</div>
+	</section>
+	<section id="member">
+		<SectionTitle label ="member" className="white"/>
+		<div>
+			<img src = {ImagesRoute.IMG_0036}/>
+			<div class="profile-container">
+				<p class="text-5xl">ゆー</p>
+				<p class="text-md leading-text letter-text">
+					今回の担当:インフラ関連/プレゼンター/リーダー<br/>
+					得意なこと:インフラ/ネットワーク<br/>
+					好きな技術:Golang/Cisco IOS
+				</p>
+				<p class="text-md"><a href="https://github.com/toma1128">GitHub→https://github.com/toma1128</a></p>
+			</div>
+		</div>
+		<div class="reverse">
+			<img src = {ImagesRoute._20241009_182141}/>
+			<div class="profile-container">
+				<p class="text-5xl">mattu</p>
+				<p class="text-md leading-text letter-text">
+					今回の担当:企画出し/プロトタイプ制作<br/>
+					得意なこと:バックエンド/サーバーサイド<br/>
+					好きな技術:Golang/Kubernetes 
+				</p>
+				<p class="text-md"><a href="https://mattuu.com/">ポートフォリオ→https://mattuu.com/</a></p>
+				<p class="text-md"><a href="https://github.com/mattuu0">GitHub→https://github.com/mattuu0</a></p>
+				
+			</div>
+		</div>		<div>
+			<img src = {ImagesRoute.IMG_7726}/>
+			<div class="profile-container">
+				<p class="text-5xl">Engawan</p>
+				<p class="text-md leading-text letter-text">
+					今回の担当:Webフロント<br/>
+					得意なこと:フロントエンド<br/>
+					好きな技術:React/tailwindCSS
+				</p>
+				<p class="text-md"><a href="https://github.com/rikuto-mania">GitHub→https://github.com/rikuto-mania</a></p>
+			</div>
+		</div>
+		<div class="reverse">
+			<img src = {ImagesRoute.spotlight_2240207}/>
+			<div class="profile-container">
+				<p class="text-5xl">r</p>
+				<p class="text-md leading-text letter-text">
+					今回の担当:バックエンド<br/>
+					得意なこと:バックエンド<br/>
+					好きな技術:Golang/Docker
+				</p>
+				<p class="text-md"><a href="https://github.com/86shin ">GitHub→https://github.com/86shin</a></p>
+			</div>
+		</div>
+		<div>
+			<img src = {ImagesRoute.IMG_7043}/>
+			<div class="profile-container">
+				<p class="text-5xl">食物繊維 ひろと</p>
+				<p class="text-md leading-text letter-text">
+					今回の担当:デスクトップアプリ/画面デザイン/サイト制作<br/>
+					得意なこと:UI/API構築<br/>
+					好きな技術:.NET MAUI Blazor Hybrid/Astro.js
+				</p>
+				<p class="text-md"><a href="https://mattuu.com/">ポートフォリオ→https://dawn-waiting.com</a></p>
+				<p class="text-md"><a href="https://github.com/Dietary-fibari-hiroto">GitHub→https://github.com/Dietary-fibari-hiroto</a></p>
+			</div>
+		</div>
+	</section>
+	<section id="github">
+		<SectionTitle label ="プロジェクトGithubUrl"/>
+		<a href="https://github.com/Dietary-fibari-hiroto/GreaseTrace-frontend">FrontEnd&OfficialWeb:https://github.com/Dietary-fibari-hiroto/GreaseTrace-frontend</a>
+		<a href="https://github.com/toma1128/GreaseTrace-backend">BackEnd:https://github.com/toma1128/GreaseTrace-backend</a>
 	</section>
 </MainLayout>
 
@@ -131,6 +279,150 @@ import { ImagesRoute } from "../assets/ImagesRoute";
 				transform: translate(0,80%);
 				z-index: 6;
 			}
+		}
+	}
+	#about{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		background: white;
+		
+		>:first-child{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			padding:0 3rem;
+
+			.demo-horizontal-zone{
+			display: flex;
+			gap: 5rem;
+			}
+		}
+		>:last-child{
+			position:relative;
+			width:50%;
+			> .background-card{
+				position: absolute;
+				right:0;
+				z-index: 1;
+				width:50rem;
+				height:20rem;
+				transform: translateY(-50%);
+				background:var(--color-bg-gray);
+			}
+			> .text-container{
+				position: absolute;
+				right:10%;
+				z-index: 3;
+				transform: translateY(-60%);
+				> * + *,.inside-content > * + *{
+					margin-top: 3rem;
+				}
+				>.inside-content{
+					margin-left:2rem;
+				}
+			}
+		}
+
+	}
+	#technology{
+		background:white;
+		display:flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items:center;
+		text-align: center;
+		.img-list{
+			border:solid 1px var(--color-primary);
+			border-radius: 1rem;
+			width:50rem;
+			height:13rem;
+			display: flex;
+			justify-content: space-evenly;
+			align-items:center;
+			> img{
+				width: 8rem;
+				height: 8rem;
+			}
+		}
+	}
+	#download{
+		display: flex;
+		flex-direction: column;
+		justify-content:space-evenly;
+		align-items: center;
+		background: white;
+		
+		> div{
+			width:60rem;
+			height:22.5rem;
+			border:solid var(--color-primary) 1px;
+			border-radius:1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			text-align: center;
+			.logo-container{
+				display: flex;
+				align-items: center;
+				>img{
+					height:3rem;
+				}
+				> * + *{
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
+	#member{
+		position:relative;
+		background-color: var(--color-quatemary);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		> *{
+			margin: 3rem 0;
+		}
+		> div{
+			height: 32.25rem;
+			width: 60rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color:white;
+			font-family: "NotoSerifJP";
+			&.reverse{
+				flex-direction: row-reverse;
+			}
+			>:last-child{
+				margin-left: 3rem;
+			}
+			> img {
+				height: 100%;
+				width: 25rem;
+				  box-shadow: 0 30px 60px rgba(0,0,0,0.7); 
+			}
+			.profile-container{
+				> * + *{
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+	#github{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding:3rem 0;
+		> *{
+			margin:3rem 0;
+			color: white;
+			font-size: 1.125rem;
+			text-decoration: underline;
 		}
 	}
 </style>

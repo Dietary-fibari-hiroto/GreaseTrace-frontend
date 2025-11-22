@@ -11,6 +11,12 @@ import panel_top from "./images/panel-top.svg";
 import react_original_logo_icon_146374 from "./images/react_original_logo_icon_146374.png";
 import shield_half from "./images/shield-half.svg";
 
+import IMG_7726 from "./images/IMG_7726.jpg";
+import spotlight_2240207 from "./images/spotlight_2240207_.jpg";
+import _20241009_182141 from "./images/20241009_182141.jpg";
+import IMG_0036 from "./images/IMG_0036.jpg";
+import IMG_7043 from "./images/IMG_7043.jpg";
+
 export const ImagesRoute = {
   _3409784: _3409784.src,
   cable: cable.src,
@@ -24,4 +30,9 @@ export const ImagesRoute = {
   panel_top: panel_top.src,
   react_original_logo_icon_146374: react_original_logo_icon_146374.src,
   shield_half: shield_half.src,
+  IMG_7726: IMG_7726.src,
+  spotlight_2240207: spotlight_2240207.src,
+  _20241009_182141: _20241009_182141.src,
+  IMG_0036: IMG_0036.src,
+  IMG_7043: IMG_7043.src,
 };

@@ -1,12 +1,12 @@
 ---
-import { scrollToSection } from "../assets/js/scroll"
+import { scrollToSection } from "../assets/utils/scroll"
 import { ImagesRoute } from "../assets/ImagesRoute"
 const sections = [
     {id:"hero",label:"Home"},
     {id:"concept",label:"Concept"},
     {id:"about",label:"About"},
     {id:"download",label:"Download"},
-    {id:"menber",label:"Menber"},
+    {id:"member",label:"Member"},
     {id:"github",label:"GitHub"}
 ]
 ---
@@ -14,11 +14,11 @@ const sections = [
 <header>
     <div class="apple-title-content">
         <img src = {ImagesRoute.GreaseTraiceIcon}/>
-        <span class="text-3xl font-bold">Grease Trace</span>
+        <span class="text-3xl font-bold ">Grease Trace</span>
     </div>
     <nav class="text-lg">
         {sections.map(({id,label})=>(
-            <button class="text-lg font-medium" onclick={`scrollToSection('${id}')`}>
+            <button class=" text-lg font-medium" onclick={`(${scrollToSection.toString()})('${id}')`}>
                 {label}
             </button>
         ))}
@@ -30,6 +30,7 @@ const sections = [
 
 
 <style lang="scss">
+
     header{
         box-sizing: border-box;
         position:fixed;
@@ -43,7 +44,9 @@ const sections = [
         align-items: center;
         padding:0 10px;
         margin:10px 0;
-        color:white;
+        *{
+        color:black;
+    }
 
         .apple-title-content{
             display:flex;
@@ -60,6 +63,7 @@ const sections = [
         nav{
             display:flex;
             align-items: center;
+            
             > * + *{
                 margin-left:3rem;
             }
