@@ -4,3 +4,4 @@ export {default as Endview} from "./Endview";
 export {default as Home} from "./Home";
 export {default as Login} from "./Login";
 export {default as Register} from "./Register";
+export {default as View} from  "./View";

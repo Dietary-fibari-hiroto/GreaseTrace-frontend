@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import FunctionCard from "../components/FunctionCard"
 import { cable,fullScreen,monitor_down } from "../Assets/Images/ImagesRoute";
 
-
 const icons ={
     fullScreen,
     cable,
