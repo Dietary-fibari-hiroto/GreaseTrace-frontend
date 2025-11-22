@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import { scrollToSection } from "../assets/js/scroll"
+import { scrollToSection } from "../assets/utils/scroll"
 import { ImagesRoute } from "../assets/ImagesRoute";
 import { DemoElement,SectionTitle } from "../components";
 ---
@@ -178,7 +178,7 @@ PeerJS（WebRTC）による低遅延のリアルタイム通信 を統合する�
 					得意なこと:UI/API構築<br/>
 					好きな技術:.NET MAUI Blazor Hybrid/Astro.js
 				</p>
-				<p class="text-md"><a href="https://mattuu.com/">ポートフォリオ→https://dawn-waiting.com</a></p>
+				<p class="text-md"><a href="https://dawn-waiting.com">ポートフォリオ→https://dawn-waiting.com</a></p>
 				<p class="text-md"><a href="https://github.com/Dietary-fibari-hiroto">GitHub→https://github.com/Dietary-fibari-hiroto</a></p>
 			</div>
 		</div>
@@ -425,6 +425,13 @@ PeerJS（WebRTC）による低遅延のリアルタイム通信 を統合する�
 			text-decoration: underline;
 		}
 	}
+
+	@media (max-width: 1024px) {
+		#hero{
+			flex-direction: column-reverse;
+		}
+	}
+
 </style>
 
 
