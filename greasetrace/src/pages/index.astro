@@ -3,6 +3,59 @@ import MainLayout from "../layouts/MainLayout.astro"
 import { scrollToSection } from "../assets/utils/scroll"
 import { ImagesRoute } from "../assets/ImagesRoute";
 import { DemoElement,SectionTitle } from "../components";
+
+const memberList=[
+	{
+		name:"ゆー",
+		img:ImagesRoute.IMG_0036,
+		inCharge:"インフラ関連/プレゼンター/リーダー",
+		specialties:"インフラ/ネットワーク",
+		favoriteTechnology:"Golang/Cisco IOS",
+		gitUrl:"https://github.com/toma1128",
+		portfolioUrl:null,
+		onReverse:false
+	},
+	{
+		name:"mattu",
+		img:ImagesRoute._20241009_182141,
+		inCharge:"企画出し/プロトタイプ制作",
+		specialties:"バックエンド/サーバーサイド",
+		favoriteTechnology:"Golang/Kubernetes ",
+		gitUrl:"https://mattuu.com/",
+		portfolioUrl:"https://github.com/mattuu0",
+		onReverse:true
+	},
+	{
+		name:"Engawan",
+		img:ImagesRoute.IMG_7726,
+		inCharge:"Webフロント",
+		specialties:"フロントエンド",
+		favoriteTechnology:"React/tailwindCSS",
+		gitUrl:"https://github.com/rikuto-mania",
+		portfolioUrl:null,
+		onReverse:false
+	},
+	{
+		name:"mattu",
+		img:ImagesRoute.spotlight_2240207,
+		inCharge:"バックエンド",
+		specialties:"バックエンド",
+		favoriteTechnology:"Golang/Docker",
+		gitUrl:"https://github.com/86shin/",
+		portfolioUrl:null,
+		onReverse:true
+	},
+	{
+		name:"食物繊維 ひろと",
+		img:ImagesRoute.IMG_7043,
+		inCharge:"デスクトップアプリ/画面デザイン/サイト制作",
+		specialties:"UI/API構築",
+		favoriteTechnology:".NET MAUI Blazor Hybrid/Astro.js",
+		gitUrl:"https://github.com/Dietary-fibari-hiroto",
+		portfolioUrl:"https://dawn-waiting.com",
+		onReverse:false
+	}
+]
 ---
 
 <MainLayout>
@@ -120,68 +173,22 @@ PeerJS（WebRTC）による低遅延のリアルタイム通信 を統合する�
 	</section>
 	<section id="member">
 		<SectionTitle label ="member" className="white"/>
-		<div>
-			<img src = {ImagesRoute.IMG_0036}/>
-			<div class="profile-container">
-				<p class="text-5xl">ゆー</p>
-				<p class="text-md leading-text letter-text">
-					今回の担当:インフラ関連/プレゼンター/リーダー<br/>
-					得意なこと:インフラ/ネットワーク<br/>
-					好きな技術:Golang/Cisco IOS
-				</p>
-				<p class="text-md"><a href="https://github.com/toma1128">GitHub→https://github.com/toma1128</a></p>
+		{memberList.map((member)=>(
+			<div class={member.onReverse?"reverse":""}>
+				<img src = {member.img}/>
+				<div class="profile-container">
+					<p class="text-5xl">{member.name}</p>
+					<p class="text-md leading-text letter-text">
+						今回の担当:{member.inCharge}<br/>
+						得意なこと:{member.specialties}<br/>
+						好きな技術:{member.favoriteTechnology}
+					</p>
+					<p class="text-md"><a href={member.gitUrl}>GitHub→{member.gitUrl}</a></p>
+					<p class="text-md"><a href={member.portfolioUrl}>ポートフォリオ→{member.portfolioUrl}</a></p>
+				</div>
 			</div>
-		</div>
-		<div class="reverse">
-			<img src = {ImagesRoute._20241009_182141}/>
-			<div class="profile-container">
-				<p class="text-5xl">mattu</p>
-				<p class="text-md leading-text letter-text">
-					今回の担当:企画出し/プロトタイプ制作<br/>
-					得意なこと:バックエンド/サーバーサイド<br/>
-					好きな技術:Golang/Kubernetes 
-				</p>
-				<p class="text-md"><a href="https://mattuu.com/">ポートフォリオ→https://mattuu.com/</a></p>
-				<p class="text-md"><a href="https://github.com/mattuu0">GitHub→https://github.com/mattuu0</a></p>
-				
-			</div>
-		</div>		<div>
-			<img src = {ImagesRoute.IMG_7726}/>
-			<div class="profile-container">
-				<p class="text-5xl">Engawan</p>
-				<p class="text-md leading-text letter-text">
-					今回の担当:Webフロント<br/>
-					得意なこと:フロントエンド<br/>
-					好きな技術:React/tailwindCSS
-				</p>
-				<p class="text-md"><a href="https://github.com/rikuto-mania">GitHub→https://github.com/rikuto-mania</a></p>
-			</div>
-		</div>
-		<div class="reverse">
-			<img src = {ImagesRoute.spotlight_2240207}/>
-			<div class="profile-container">
-				<p class="text-5xl">r</p>
-				<p class="text-md leading-text letter-text">
-					今回の担当:バックエンド<br/>
-					得意なこと:バックエンド<br/>
-					好きな技術:Golang/Docker
-				</p>
-				<p class="text-md"><a href="https://github.com/86shin ">GitHub→https://github.com/86shin</a></p>
-			</div>
-		</div>
-		<div>
-			<img src = {ImagesRoute.IMG_7043}/>
-			<div class="profile-container">
-				<p class="text-5xl">食物繊維 ひろと</p>
-				<p class="text-md leading-text letter-text">
-					今回の担当:デスクトップアプリ/画面デザイン/サイト制作<br/>
-					得意なこと:UI/API構築<br/>
-					好きな技術:.NET MAUI Blazor Hybrid/Astro.js
-				</p>
-				<p class="text-md"><a href="https://dawn-waiting.com">ポートフォリオ→https://dawn-waiting.com</a></p>
-				<p class="text-md"><a href="https://github.com/Dietary-fibari-hiroto">GitHub→https://github.com/Dietary-fibari-hiroto</a></p>
-			</div>
-		</div>
+		))}
+		
 	</section>
 	<section id="github">
 		<SectionTitle label ="プロジェクトGithubUrl"/>
