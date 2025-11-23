@@ -38,8 +38,9 @@
 }
 
 .img-horizontal-md {
-  width: 30rem;
-  height: 20rem;
+  width: clamp(15rem, 100%, 30rem);
+  height: clamp(13rem, 100%, 20rem);
+  aspect-ratio: 16 / 9;
 }
 
 .design-element {
