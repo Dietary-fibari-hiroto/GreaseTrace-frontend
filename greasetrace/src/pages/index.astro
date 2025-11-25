@@ -68,10 +68,10 @@ const memberList=[
 				<p class="font-bold text-6xl">Grease Trace</p>
 			</div>
 			<div class="buttons">
-				<button class="submit-button quaternary submit-button gray font-medium" onclick={`scrollToSection("github")`}>
+				<button id="hero-github-btn" class="submit-button quaternary submit-button gray font-medium" onclick={`scrollToSection("github")`}>
 					Github
 				</button>
-				<button class="submit-button gray font-medium" onclick={`scrollToSection("download")`}>
+				<button id="hero-download-btn" class="submit-button gray font-medium" onclick={`scrollToSection("download")`}>
 					ソフトをダウンロード
 				</button>
 			</div>
@@ -515,6 +515,16 @@ PeerJS（WebRTC）による低遅延のリアルタイム通信 を統合する�
 
 
 <script>
+	// Githubボタンの処理
+	document.getElementById('hero-github-btn')?.addEventListener('click', () => {
+		document.getElementById('github')?.scrollIntoView({ behavior: 'smooth' });
+	});
+
+	// ダウンロードボタンの処理
+	document.getElementById('hero-download-btn')?.addEventListener('click', () => {
+		document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' });
+	});
+
 	document.addEventListener("scroll",()=>{
 		const element = document.getElementById("blur-background");
 		if(!element) return;
